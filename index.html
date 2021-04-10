@@ -3,46 +3,42 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>How did you find this?</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css">
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-5QSLJKNLV7"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-5QSLJKNLV7');
-    </script>
+    <title>Brian Taylor&#9996&#127758</title>
+    <link rel="stylesheet" href="./css/style.css">
   </head>
   <body>
-    <article class="message is-danger">
-      <span onclick="this.parentElement.style.display='none';">
-        <div class="message-header">
-          <p> 
-        Just so we're clear, this site is more of a code playground for me than anything else. Don't expect to find anything too interesting or useful here. Thanks! 
+    <div class="bg-container wrapper">
+      <nav class="header nav">
+      <img id="home" src="./img/logo.png">
+      </nav>
+      <section class="section-wrapper">
+        <div class="content-wrapper" id="words">
+          <h1>Welcome!</h1>
+          <p>This is a simple site so I can have a code playground and a place to put some of my photographs and ramblings.
+             Keep your expectations low and you just might find something that surprises you here. <br>
+             Thanks for stopping by! I'm frankly impressed you found this.
           </p>
-          <button class="delete" aria-label="delete" ></button>
         </div>
-      </span>
-    </article>
-    <section class="section">
-      <div class="container">
-        <h1 class="title">
-          Hello World!
-        </h1>
-        <p class="subtitle">
-          This is my first website built from scratch, line by line. It's a static site styled using <a href="https://bulma.io/">Bulma</a> and assembled via the git CLI<br>
-          Over time things will likely turn into a collection of my stream of consciousness writings.<br> If you made it here, wow. I hope you enjoy.
-        </p>
-        <p>Now that you're here I guess you aught to <a href="first-thoughts.html"> read something. </a>
-        </div>
-    </section>
-    <section class="section">
-      <div class="container">
-        <h2>
-          Just some simple testing text here.
-        </h2>
-      </div>
-    </section>
+        <aside class="content-wrapper" id="buttons">
+          <div class="button has-text">
+            <a href="./photos.html">
+            <button id="photos-button" class="rounded">
+            <div class="centered"> Photos </div>
+            </a>
+          </div>
+          <div class="button has-text">
+            <a href="./writings.html">
+            <button id="writings-button" class="rounded">
+            <div class="centered"> Writings </div>
+            </a>
+          </div>
+        </aside>
+      </section>
+      <footer>
+        <section class="social-links">
+          <div class="centered"> Social links will go here</div>
+        </section>
+      </footer>
+    </div>
   </body>
 </html>
