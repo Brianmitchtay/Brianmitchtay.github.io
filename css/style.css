@@ -1,0 +1,19 @@
+.medium-image {size: 400px, 250px;}
+.bg-container
+.header
+.nav
+#home
+.section-wrapper /*used 3 times */{
+  display: flex;
+  flex-flow: row wrap;
+  align-items: flex-start;
+  align-content: flex-start;
+}
+.content-wrapper
+button {}
+#photos-button {background: url("./img/mountain-silhouette.jpg");
+                background-size: 400px 250px:
+}
+#writings-button {background: url("./img/kayaking-sunset.jpg");
+                  background-size: 400px 250px:
+}
