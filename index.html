@@ -5,40 +5,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Brian Taylor&#9996&#127758</title>
     <link rel="stylesheet" href="./css/style.css">
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap');
+    </style>
   </head>
   <body>
     <div class="bg-container wrapper">
-      <nav class="header nav">
-      <img id="home" src="./img/logo.png">
-      </nav>
-      <section class="section-wrapper">
-        <div class="content-wrapper" id="words">
-          <h1>Welcome!</h1>
-          <p>This is a simple site so I can have a code playground and a place to put some of my photographs and ramblings.
-             Keep your expectations low and you just might find something that surprises you here. <br>
-             Thanks for stopping by! I'm frankly impressed you found this.
-          </p>
-        </div>
-        <aside class="content-wrapper" id="buttons">
-          <div class="button has-text">
-            <a href="./photos.html">
-            <button id="photos-button" class="rounded">
-            <div class="centered"> Photos </div>
-            </a>
+        <nav class="header nav">
+          <a href="index.html" alt="home"><img id="home" src="./img/logo.png"></a>
+          <div class="nav-title"><h1>Brian Taylor</h1><h4>Traveler | Tinkerer | Wilderness Enthusiast </div>
+        </nav>
+        <section class="section-wrapper">
+          <div class="content-wrapper" id="text">
+            <h1>Welcome!</h1>
+            <p>This is a simple site so I can have a code playground and a place to put some of my photographs and ramblings.
+              Keep your expectations low and you just might find something that surprises you here. <br>
+              Thanks for stopping by! I'm frankly impressed you found this.
+           </p>
           </div>
-          <div class="button has-text">
-            <a href="./writings.html">
-            <button id="writings-button" class="rounded">
-            <div class="centered"> Writings </div>
-            </a>
-          </div>
-        </aside>
-      </section>
-      <footer>
-        <section class="social-links">
-          <div class="centered"> Social links will go here</div>
+          <aside class="content-wrapper" id="links" >
+            <div class="button">
+              <a href="./photos.html">
+                <button type="button" id="photos-button"> Photos </button>
+              </a>
+            </div>
+            <div class="button">
+              <a href="./writings.html">
+              <button type="button" id="writings-button" class="rounded"> Writings </button>
+              </a>
+            </div>
+          </aside>
         </section>
-      </footer>
-    </div>
+      </div>
+    <footer>
+      <span class="social-links">
+        <div class="centered"> Social links will go here</div>
+      </span>
+    </footer>
+
   </body>
 </html>
