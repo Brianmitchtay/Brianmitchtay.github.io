@@ -2,10 +2,15 @@ body {
   font-family: arial;
   width: 100%;
   height: 120vh;
-  padding: 0px;
+  padding: 0;
   margin: 0;
 }
+h1 {
+  font-family: 'Dela Gothic One', cursive;
+}
 .bg-container {
+  position: relative;
+  z-index: 1;
   width: 100%;
   height: 130vh;
   padding: 0px;
@@ -13,7 +18,6 @@ body {
   background: url("../img/wachusett-inlet.jpg")
     top left / 100% 100%
     no-repeat
-    fixed
     silver;
   overflow: visible;
 }
@@ -35,15 +39,10 @@ nav h4 {
   margin: 0 4vw;
   align-content: left;
 }
-#home{
+nav img{
   border-radius: 8em;
 }
-#home:active{
-  -webkit-box-shadow: inset 0px 0px 5px #c1c1c1;
-     -moz-box-shadow: inset 0px 0px 5px #c1c1c1;
-          box-shadow: inset 0px 0px 5px #c1c1c1;
-   outline: none;
-}
+
 .section-wrapper{
   width: 100%;
   margin: 0px;
@@ -53,31 +52,37 @@ nav h4 {
   flex-flow: row wrap;
 }
 .content-wrapper {
-  margin: 0;
+  margin: 0 auto;
+  display: flex;
+  flex-flow: column wrap;
   padding: inherit;
   width: fit-content;
 }
 #text {
   width: 35%;
+  margin: 0 auto;
   height: fit-content;
   margin: inherit;
   padding: inherit;
+  padding-left: 5px;
   background-color: rgb(192,192,192, 0.6);
   border-radius: 2.5em;
-  flex-flow: wrap
-}
-h1 {
-  font-family: 'Dela Gothic One', cursive;
 }
 #links{
+  display: flex;
+  flex-flow: column wrap;
   width: 50%;
   margin: inherit;
   padding: inherit;
 }
+#links div {
+  padding: 12px;
+  margin: 0 auto;
+}
 button {
-width: 20em;
-height: 13.2em;
-border-radius: 2.5em;
+  width: 20em;
+  height: 13.2em;
+  border-radius: 2.5em;
 }
 button:hover {
   box-shadow: 4px;
@@ -90,17 +95,22 @@ button:active {
    outline: none;
 }
 #photos-button {
-background-image: url("../img/mountain-silhouette.jpg");
+background-image: url("../img/mountain-silhouette-thumb.jpg");
 background-size: 100% auto;
 }
 #writings-button {
-  background-image: url("../img/kayaking-sunset.jpg");
+  background-image: url("../img/kayaking-sunset-thumb.jpg");
   background-size: 100% auto;
 }
 footer{
-  display: absolute;
+  display: flex;
+  position: sticky;
+  justify-content: center;
+  bottom: 0;
+  left: 0;
+  right: 0;
   width: 100%;
-  height: 20vh;
+  height: 15vh;
   background-color:silver;
   background-image:
   radial-gradient(circle at 100% 150%, silver 24%, white 24%, white 28%, silver 28%, silver 36%, white 36%, white 40%, transparent 40%, transparent),
@@ -108,7 +118,30 @@ footer{
   radial-gradient(circle at 50%  100%, white 10%, silver 10%, silver 23%, white 23%, white 30%, silver 30%, silver 43%, white 43%, white 50%, silver 50%, silver 63%, white 63%, white 71%, transparent 71%, transparent),
   radial-gradient(circle at 100% 50%, white 5%, silver 5%, silver 15%, white 15%, white 20%, silver 20%, silver 29%, white 29%, white 34%, silver 34%, silver 44%, white 44%, white 49%, transparent 49%, transparent),
   radial-gradient(circle at 0    50%, white 5%, silver 5%, silver 15%, white 15%, white 20%, silver 20%, silver 29%, white 29%, white 34%, silver 34%, silver 44%, white 44%, white 49%, transparent 49%, transparent);
-  background-size: 100px 50px;}
+  background-size: 100px 50px;
+}
+div.footer-content {
+  font-family: arial;
+  font-weight: bolder;
+  background-color: rgb(192,192,192, 0.6);
+  border-radius: 15px;
+  align-self: center;
+  height: fit-content;
+  padding-top: 1%;
+  padding-left: 5vw;
+  margin: 0;
+}
+.footer-content p {
+  width: 30ch;
+}
+div.social-links {
+  display: flex;
+  justify-content: space-around;
+  align-self: center;
+  width: 20%;
+  padding-top: 1%;
+}
+
 
 @media screen and (max-width: 768px) and (orientation: portrait) {
   .bg-container{
@@ -123,10 +156,13 @@ footer{
   #links{
     width: 85%;
   }
+  footer{
+    height: 30vh;
+  }
 }
-@media screen and (orientation: landscape) and (max-width: 740px) {
+@media screen and (orientation: landscape) and (max-width: 900px) {
   .bg-container{
-    height: 200vh;
+    height: 220vh;
   }
   .content-wrapper div{
     display: flex;
@@ -140,5 +176,8 @@ footer{
   }
   #links{
     width: 45%;
+  }
+  footer {
+    height: 30vh;
   }
 }
