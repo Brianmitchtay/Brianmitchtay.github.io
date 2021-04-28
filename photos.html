@@ -12,12 +12,12 @@
   </head>
   <body class="gallery-page">
     <div class="bg-gallery">
-      <nav class="header nav">
-        <a href="index.html" alt="home"><img src="./img/logo.png"></a>
+      <nav class="header home-nav">
+        <a href="index.html" alt="home"><img class="logo" src="./img/logo.png"></a>
         <div class="nav-title"><h1>Brian Taylor</h1><h4>Traveler | Tinkerer | Wilderness Enthusiast </div>
       </nav>
         <!-- Container for the image gallery -->
-<div class="container">
+<section class="gallery-container">
 
   <!-- Full-width images with number text -->
   <div class="mySlides">
@@ -50,37 +50,35 @@
       <img src="./img/gallery/humpback-fluke.jpg" style="max-width:100%;max-height:100%">
   </div>
 
-  <!-- Next and previous buttons -->
-  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-  <a class="next" onclick="plusSlides(1)">&#10095;</a>
-
-  <!-- Image text -->
+  <!-- Caption and navigation buttons -->
   <div class="caption-container">
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
     <p id="caption"></p>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
   </div>
 
   <!-- Thumbnail images -->
   <div class="row">
     <div class="column">
-      <img class="demo cursor" src="./img/gallery/glacier-bay-np-east-arm-thumbnail.jpg" style="width:100%" onclick="currentSlide(1)" alt="The East Arm of Glacier Bay National Park">
+      <img class="thumbnail cursor" src="./img/gallery/glacier-bay-np-east-arm-thumbnail.jpg" style="width:100%" onclick="currentSlide(1)" alt="The East Arm of Glacier Bay National Park">
     </div>
     <div class="column">
-      <img class="demo cursor" src="./img/gallery/tent-on-moss-thumbnail.jpg" style="width:100%" onclick="currentSlide(2)" alt="Camping in the moss">
+      <img class="thumbnail cursor" src="./img/gallery/tent-on-moss-thumbnail.jpg" style="width:100%" onclick="currentSlide(2)" alt="Camping in the moss">
     </div>
     <div class="column">
-      <img class="demo cursor" src="./img/gallery/in-tent-thumbnail.jpg" style="width:100%" onclick="currentSlide(3)" alt="Getting the tent ready">
+      <img class="thumbnail cursor" src="./img/gallery/in-tent-thumbnail.jpg" style="width:100%" onclick="currentSlide(3)" alt="Getting the tent ready">
     </div>
     <div class="column">
-      <img class="demo cursor" src="./img/gallery/miller-peak-thumbnail.jpg" style="width:100%" onclick="currentSlide(4)" alt="Miller Peak in Glacier Bay NP, ALaska">
+      <img class="thumbnail cursor" src="./img/gallery/miller-peak-thumbnail.jpg" style="width:100%" onclick="currentSlide(4)" alt="Miller Peak in Glacier Bay NP, ALaska">
     </div>
     <div class="column">
-      <img class="demo cursor" src="./img/gallery/over-shoulder-thumbnail.jpg" style="width:100%" onclick="currentSlide(5)" alt="Looking towards Mt Fairweather">
+      <img class="thumbnail cursor" src="./img/gallery/over-shoulder-thumbnail.jpg" style="width:100%" onclick="currentSlide(5)" alt="Looking towards Mt Fairweather">
     </div>
     <div class="column">
-      <img class="demo cursor" src="./img/gallery/humpback-fluke-thumbnail.jpg" style="width:100%" onclick="currentSlide(6)" alt="A diving humpback whale">
+      <img class="thumbnail cursor" src="./img/gallery/humpback-fluke-thumbnail.jpg" style="width:100%" onclick="currentSlide(6)" alt="A diving humpback whale">
     </div>
   </div>
-</div>
+</section>
       <footer>
         <div class="footer-content"><p> You can contact me on any of these platforms, They're listed in order of where I'm most likely to respond.</p></div>
         <div class="social-links">

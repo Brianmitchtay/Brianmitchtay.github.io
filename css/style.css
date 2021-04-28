@@ -1,53 +1,83 @@
-body {
+
+/* Base rules */
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+body, nav, section, {
   font-family: arial;
-  width: 100%;
-  height: 120vh;
   padding: 0;
-  margin: 0;
+  margin: 0 auto;
+}
+p {
+  font-family: arial;
+  padding: 0 16px;
 }
 h1 {
   font-family: 'Dela Gothic One', cursive;
+  padding: 0 16px;
+}
+/* layout rules */
+body.home {
+  width: 100%;
+  height: 120vh;
+}
+body.writings{
+  width: 100%;
+  height: auto;
+  background:
+linear-gradient(135deg, #708090 21px, #d9ecff 22px, #d9ecff 24px, transparent 24px, transparent 67px, #d9ecff 67px, #d9ecff 69px, transparent 69px),
+linear-gradient(225deg, #708090 21px, #d9ecff 22px, #d9ecff 24px, transparent 24px, transparent 67px, #d9ecff 67px, #d9ecff 69px, transparent 69px)0 64px;
+background-color:#708090;
+background-size: 64px 128px;
 }
 .bg-container {
   position: relative;
   z-index: 1;
   width: 100%;
   height: 130vh;
-  padding: 0px;
-  margin: 0;
   background: url("../img/wachusett-inlet.jpg")
     top left / 100% 100%
     no-repeat
     silver;
   overflow: visible;
 }
-nav {
+.bg-gallery {
+  height:100vh;
+  width:auto;
+  background-image:
+  radial-gradient(circle at 100% 150%, silver 24%, white 24%, white 28%, silver 28%, silver 36%, white 36%, white 40%, transparent 40%, transparent),
+  radial-gradient(circle at 0    150%, silver 24%, white 24%, white 28%, silver 28%, silver 36%, white 36%, white 40%, transparent 40%, transparent),
+  radial-gradient(circle at 50%  100%, white 10%, silver 10%, silver 23%, white 23%, white 30%, silver 30%, silver 43%, white 43%, white 50%, silver 50%, silver 63%, white 63%, white 71%, transparent 71%, transparent),
+  radial-gradient(circle at 100% 50%, white 5%, silver 5%, silver 15%, white 15%, white 20%, silver 20%, silver 29%, white 29%, white 34%, silver 34%, silver 44%, white 44%, white 49%, transparent 49%, transparent),
+  radial-gradient(circle at 0    50%, white 5%, silver 5%, silver 15%, white 15%, white 20%, silver 20%, silver 29%, white 29%, white 34%, silver 34%, silver 44%, white 44%, white 49%, transparent 49%, transparent);
+  background-size: 100px 50px;
+}
+nav.home-nav {
   display: flex;
-  height: 10vh;
   padding-top: 10px;
-  padding-left: 0;
-  padding-bottom: 0px;
-  margin: 0 auto;
-  margin-bottom: 75px;
+}
+nav.writings-nav {
+  padding-top: .7em;
 }
 nav h1 {
   display: inherit;
-  padding: 0 4vw;
   align-content: left;
 }
 nav h4 {
   display: inherit;
-  margin: 0 4vw;
+  padding: 0 16px;
   align-content: left;
 }
-nav img{
+nav img.logo{
   border-radius: 8em;
 }
 
 .section-wrapper{
   width: 100%;
   margin: 0px;
-  margin-top: 3em;
   display: flex;
   justify-content: center;
   flex-flow: row wrap;
@@ -85,23 +115,14 @@ button {
   height: 13.2em;
   border-radius: 2.5em;
 }
-button:hover {
-  box-shadow: 4px;
-  cursor: pointer;
-}
-button:active {
-  -webkit-box-shadow: inset 0px 0px 5px #c1c1c1;
-     -moz-box-shadow: inset 0px 0px 5px #c1c1c1;
-          box-shadow: inset 0px 0px 5px #c1c1c1;
-   outline: none;
-}
-#photos-button {
-background-image: url("../img/mountain-silhouette-thumb.jpg");
-background-size: 100% auto;
-}
-#writings-button {
-  background-image: url("../img/kayaking-sunset-thumb.jpg");
-  background-size: 100% auto;
+.button-text{
+  position: relative;
+  bottom: 28%;
+  font-family: monospace;
+  font-size: 24px;
+  line-height: 2;
+  font-weight: bolder;
+  color: rgb(255, 161, 10);
 }
 footer{
   display: flex;
@@ -124,8 +145,40 @@ footer{
   radial-gradient(circle at 0    50%, white 5%, silver 5%, silver 15%, white 15%, white 20%, silver 20%, silver 29%, white 29%, white 34%, silver 34%, silver 44%, white 44%, white 49%, transparent 49%, transparent);
   background-size: 100px 50px;
 }
+div.social-links {
+  display: flex;
+  justify-content: space-around;
+  align-self: center;
+  width: 20%;
+  padding-top: 1%;
+}
+.footer-content p {
+  width: 30ch;
+}
+
+/* module rules */
+#photos-button {
+background-image: url("../img/mountain-silhouette-thumb.jpg");
+background-size: 100% auto;
+}
+#writings-button {
+  background-image: url("../img/kayaking-sunset-thumb.jpg");
+  background-size: 100% auto;
+}
+.post-content{
+  background-color: rgba(192,192,192, 0.8);
+}
+.post-title h1{
+  margin-bottom: 0;
+}
+.post-title .subheader {
+  text-decoration: underline;
+  font-style: italic;
+  font-weight: lighter;
+  margin-bottom: .7em;
+  margin-top: 0;
+}
 div.footer-content {
-  font-family: arial;
   font-weight: bolder;
   background-color: rgb(192,192,192, 0.6);
   border-radius: 15px;
@@ -135,18 +188,24 @@ div.footer-content {
   padding-left: 5vw;
   margin: 0;
 }
-.footer-content p {
-  width: 30ch;
+
+/* state rules */
+button:hover {
+  cursor: pointer;
 }
-div.social-links {
-  display: flex;
-  justify-content: space-around;
-  align-self: center;
-  width: 20%;
-  padding-top: 1%;
+button:hover > .button-text{
+  color: rgb(191, 120, 6);
+}
+button:active {
+  -webkit-box-shadow: inset 0px 0px 5px #c1c1c1;
+     -moz-box-shadow: inset 0px 0px 5px #c1c1c1;
+          box-shadow: inset 0px 0px 5px #c1c1c1;
+   outline: none;
 }
 
 
+/* responsive layout changes */
+/* Portrait Phones */
 @media screen and (max-width: 768px) and (orientation: portrait) {
   .bg-container{
     height: 140vh;
@@ -164,6 +223,8 @@ div.social-links {
     height: 30vh;
   }
 }
+
+/* Landscape Phones */
 @media screen and (orientation: landscape) and (max-width: 900px) {
   .bg-container{
     height: 220vh;
@@ -187,13 +248,8 @@ div.social-links {
 }
 
 /* wc3 schools css for image gallery */
-
-* {
-  box-sizing: border-box;
-}
-
 /* Position the image container (needed to position the left and right arrows) */
-.container {
+.gallery-container {
   display:flex;
   flex-flow:column;
   position: relative;
@@ -202,18 +258,6 @@ div.social-links {
   height:115vh;
   width:auto;
 }
-.bg-gallery {
-  height:100vh;
-  width:auto;
-  background-image:
-  radial-gradient(circle at 100% 150%, silver 24%, white 24%, white 28%, silver 28%, silver 36%, white 36%, white 40%, transparent 40%, transparent),
-  radial-gradient(circle at 0    150%, silver 24%, white 24%, white 28%, silver 28%, silver 36%, white 36%, white 40%, transparent 40%, transparent),
-  radial-gradient(circle at 50%  100%, white 10%, silver 10%, silver 23%, white 23%, white 30%, silver 30%, silver 43%, white 43%, white 50%, silver 50%, silver 63%, white 63%, white 71%, transparent 71%, transparent),
-  radial-gradient(circle at 100% 50%, white 5%, silver 5%, silver 15%, white 15%, white 20%, silver 20%, silver 29%, white 29%, white 34%, silver 34%, silver 44%, white 44%, white 49%, transparent 49%, transparent),
-  radial-gradient(circle at 0    50%, white 5%, silver 5%, silver 15%, white 15%, white 20%, silver 20%, silver 29%, white 29%, white 34%, silver 34%, silver 44%, white 44%, white 49%, transparent 49%, transparent);
-  background-size: 100px 50px;
-}
-
 /* Hide the images by default */
 .mySlides {
   height:70vh;
@@ -221,41 +265,37 @@ div.social-links {
   justify-content: center;
   background-color: rgba(0, 0, 0, 0.7);
 }
-
 /* Add a pointer when hovering over the thumbnail images */
 .cursor {
   cursor: pointer;
 }
-
+/* Container for captions and nav buttons */
+.caption-container {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  background-color: #222;
+  padding: 2px 16px;
+  color: white;
+}
 /* Next & previous buttons */
-.prev,
-.next {
+.prev, .next {
+  display: flex;
   cursor: pointer;
-  position: absolute;
-  top: 35%;
-  width: auto;
-  padding: 16px;
-  margin-top: -50px;
+  position: relative;
   color: orange;
   font-weight: bold;
   font-size: 20px;
-  border-radius: 0 3px 3px 0;
   user-select: none;
   -webkit-user-select: none;
+  align-self: center;
 }
-
-/* Position the "next button" to the right */
-.next {
-  right: 0;
-  border-radius: 3px 0 0 3px;
-}
-
 /* On hover, add a black background color with a little bit see-through */
 .prev:hover,
 .next:hover {
   background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 25%;
 }
-
 /* Number text (1/3 etc) */
 .numbertext {
   color: #f2f2f2;
@@ -264,33 +304,21 @@ div.social-links {
   position: absolute;
   top: 0;
 }
-
-/* Container for image text */
-.caption-container {
-  text-align: center;
-  background-color: #222;
-  padding: 2px 16px;
-  color: white;
-}
-
 .row:after {
   content: "";
   display: table;
   clear: both;
 }
-
 /* Six columns side by side */
 .column {
   float: left;
   width: 16.66%;
 }
-
 /* Add a transparency effect for thumnbail images */
-.demo {
+.thumbnail {
   opacity: 0.9;
 }
-
 .active,
-.demo:hover {
+.thumbnail:hover {
   opacity: 1;
 }
