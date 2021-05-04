@@ -10,14 +10,14 @@ body {
   height: 100vh;
   padding: 0px;
   margin: 0;
+  overflow: visible;
+  display: flex;
+  flex-flow: row wrap;
   background: url("../img/wachusett-inlet.jpg")
     top left / 100% 100%
     no-repeat
     fixed
     silver;
-  overflow: visible;
-  display: flex;
-  flex-flow: row wrap;
 }
 nav {
   display: flex;
