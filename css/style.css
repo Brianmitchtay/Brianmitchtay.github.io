@@ -6,20 +6,34 @@ html {
 *, *:before, *:after {
   box-sizing: inherit;
 }
-body, nav, section, {
+body, nav, section {
   font-family: arial;
   padding: 0;
-  margin: 0 auto;
+  margin: 0;
 }
 p {
   font-family: arial;
   padding: 0 16px;
+  text-indent: 4ch;
 }
 h1 {
   font-family: 'Dela Gothic One', cursive;
   padding: 0 16px;
 }
 /* layout rules */
+.container {
+  display: flex;
+  flex-direction: column;
+}
+.scaled {
+  max-width: 60%;
+  max-height: 60%;
+}
+.centered {
+  display: flex;
+  align-self: center;
+  justify: center;
+}
 body.home {
   width: 100%;
   height: 120vh;
@@ -79,7 +93,7 @@ nav img.logo{
   width: 100%;
   margin: 0px;
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   flex-flow: row wrap;
 }
 .content-wrapper {
@@ -102,7 +116,7 @@ nav img.logo{
 #links{
   display: flex;
   flex-flow: column wrap;
-  width: 50%;
+  width: 30%;
   margin: inherit;
   padding: inherit;
 }
@@ -170,6 +184,7 @@ background-size: 100% auto;
 }
 .post-title h1{
   margin-bottom: 0;
+  border-top: 3px rgba(18, 140, 59, 0.8) dashed;
 }
 .post-title .subheader {
   text-decoration: underline;
